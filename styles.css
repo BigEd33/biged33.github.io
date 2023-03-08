@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Tilt Neon');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
+
+
+@media (max-width: 767px) {
+    .mobile-hide {
+      display: none !important;
+    }
+  }
 
 @media (max-width: 800px) {
     html, body {
@@ -12,12 +22,15 @@
     padding: 0px;
 }
 
-body{
-    font-family: 'Exo', sans-serif;
+h1, h2, h3 {
+    /* font-family: 'Lato' !important; */
+    /* font-family: 'Tilt Neon' !important; */
+    font-family: 'Nunito' !important;
+
 }
 
 button {
-    background-color: #3f45ad !important;
+    background-color: #535ada !important;
     color: white !important; 
 }
 
@@ -37,7 +50,7 @@ button:disabled {
 .context {
     width: 100%;
     position: absolute;
-    top:20vh;
+    top:10vh;
 }
 
 .context {
@@ -149,8 +162,6 @@ button:disabled {
     animation-delay: 0s;
     animation-duration: 11s;
 }
-
-
 
 @keyframes animate {
 
