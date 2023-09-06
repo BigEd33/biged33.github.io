@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Tilt Neon');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-
-
-
+/* Media Queries */
 @media (max-width: 767px) {
     .mobile-hide {
       display: none !important;
@@ -13,9 +9,15 @@
 
 @media (max-width: 800px) {
     html, body {
-    overflow-x: hidden !important;
+        overflow-x: hidden !important;
+        background-color: var(--main-color) !important;
     }
   }
+
+/* Declarations */
+html:root {
+    --main-color: #535ada;
+}
 
 *{
     margin: 0px;
@@ -23,14 +25,15 @@
 }
 
 h1, h2, h3 {
-    /* font-family: 'Lato' !important; */
-    /* font-family: 'Tilt Neon' !important; */
     font-family: 'Nunito' !important;
+}
 
+a:link, a:visited {
+    color: blue !important;
 }
 
 button {
-    background-color: #535ada !important;
+    background-color: #5258c6 !important;
     color: white !important; 
 }
 
@@ -39,34 +42,31 @@ button:disabled {
 }
 
 .main-color {
-    background-color: #4e54c8 !important;
+    background-color: var(--main-color) !important;
     color: white;
 }
 
 .card {
     margin-bottom: 0% !important;
+    background-color: var(--main-color) !important;
 }
 
 .context {
     width: 100%;
     position: absolute;
     top:10vh;
-}
-
-.context {
     text-align: center;
     color: #fff;
-    width: 100%;
 }
 
-.area{
-    background: #4e54c8;  
+.area {
+    background: var(--main-color);  
     width: 100%;
-    height:100vh;
+    height: 150vh;
     pointer-events: none;
 }
 
-.bubbles{
+.bubbles {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,7 +75,7 @@ button:disabled {
     overflow: hidden;
 }
 
-.bubbles li{
+.bubbles li {
     position: absolute;
     display: block;
     list-style: none;
@@ -83,11 +83,11 @@ button:disabled {
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
-    bottom: -150px;
+    bottom: -180px;
     
 }
 
-.bubbles li:nth-child(1){
+.bubbles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
@@ -95,7 +95,7 @@ button:disabled {
 }
 
 
-.bubbles li:nth-child(2){
+.bubbles li:nth-child(2) {
     left: 10%;
     width: 20px;
     height: 20px;
@@ -103,14 +103,14 @@ button:disabled {
     animation-duration: 12s;
 }
 
-.bubbles li:nth-child(3){
+.bubbles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
 }
 
-.bubbles li:nth-child(4){
+.bubbles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -118,28 +118,28 @@ button:disabled {
     animation-duration: 18s;
 }
 
-.bubbles li:nth-child(5){
+.bubbles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
-.bubbles li:nth-child(6){
+.bubbles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.bubbles li:nth-child(7){
+.bubbles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.bubbles li:nth-child(8){
+.bubbles li:nth-child(8) {
     left: 50%;
     width: 25px;
     height: 25px;
@@ -147,7 +147,7 @@ button:disabled {
     animation-duration: 45s;
 }
 
-.bubbles li:nth-child(9){
+.bubbles li:nth-child(9) {
     left: 20%;
     width: 15px;
     height: 15px;
@@ -155,7 +155,7 @@ button:disabled {
     animation-duration: 35s;
 }
 
-.bubbles li:nth-child(10){
+.bubbles li:nth-child(10) {
     left: 85%;
     width: 150px;
     height: 150px;
@@ -164,7 +164,6 @@ button:disabled {
 }
 
 @keyframes animate {
-
     0%{
         transform: translateY(0) rotate(0deg);
         opacity: 1;
@@ -176,5 +175,4 @@ button:disabled {
         opacity: 0;
         border-radius: 50%;
     }
-
 }
