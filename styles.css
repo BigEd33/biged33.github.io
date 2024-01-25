@@ -63,10 +63,23 @@ button:disabled {
     color: #fff;
 }
 
+.skillcard {
+    background-color: #4e54ca;
+    transition: all 0.5s ease;
+    padding: 13px;
+    cursor: default;
+}
+
+.skillcard:hover {
+    padding: 19px;
+}
+
+/* BG Bubbles */
+
 .area {
     background: var(--main-color);  
     width: 100%;
-    height: 150vh;
+    height: 130vh;
     pointer-events: none;
 }
 
