@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+    --white: #FFFFFF;
+}
+
+body {
+    color: var(--white);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Lato", sans-serif !important;
+}
+
+p, li {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+a {
+    color: #0055ff !important;
+}
+
+img {
+    border: 2px solid var(--white);
+}
+
+.divider {
+    display: block;
+    width: 100%;
+    border-bottom: 4px solid white;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.card {
+    @apply bg-[#273245] rounded p-[1.5rem] md:flex items-center gap-3 my-1 md:my-0;
+}
+
+.percent_progress {
+    @apply flex flex-col justify-center rounded-full overflow-hidden bg-blue-500 text-xs text-white text-center whitespace-nowrap transition duration-500;
+}
+
+.fadein{-webkit-animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+.bottomsw{-webkit-animation:tracking-in-expand 1.5s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand 1.5s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+/* Bubbles */
+
+.area {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bubbles li {
+    position: fixed;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -180px;
+    
+}
+
+.bubbles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.bubbles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.bubbles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.bubbles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.bubbles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.bubbles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.bubbles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.bubbles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.bubbles li:nth-child(9) {
+    left: 20%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.bubbles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.bubbles li:nth-child(11) {
+    right: 5%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 21s;
+}
+
+.bubbles li:nth-child(12) {
+    left: 6%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+        bottom: -200px;
+        opacity: 100%;
+        border-radius: 0;
+    }
+
+    to {
+        transform: rotate(720deg);
+        bottom: 100%;
+        opacity: 75%;
+        border-radius: 50%;
+    }
+}
+
+/* 
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        bottom: 0;
+        transform: translateY(-50%) rotate(360deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+} */
